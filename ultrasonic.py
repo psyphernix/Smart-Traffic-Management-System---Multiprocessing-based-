@@ -7,7 +7,7 @@ def distance(GPIO_TRIGGER, GPIO_ECHO):
     '''
     Input Parameter: GPIO_TRIGGER - Trigger Pin Number
                      GPIO_ECHO - Echo Pin Number
-    Return: True or False
+    Return: distance - distance of vehicle in centimeters.
     Purpose: To calculate distance of object from ultrasonic sensor in
              centimeter
     '''
