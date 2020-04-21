@@ -41,8 +41,7 @@ def trafficCheck(Trigger, Echo, sensorState, sid):
                      Echo - Echo Pin Number
                      sensorState - master array containg state from all sensors
                      sid: Sensor Identification Number
-    Return: Stat - an array containing six value. Each value can be
-            either True or False.
+    Return: sensorState - an array containing six value. Value from this funciton is written in sid-1 postion.
     Purpose: To check stopped traffic at the junction. If obstacle is
              dedected continuously for 30 distance calculation, there is considered
              to be a traffic jam.
