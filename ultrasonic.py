@@ -3,11 +3,10 @@ import RPi.GPIO as GPIO
 import time
 
 # defining distance function
-def distance(GPIO_TRIGGER, GPIO_ECHO, sid):
+def distance(GPIO_TRIGGER, GPIO_ECHO):
     '''
     Input Parameter: GPIO_TRIGGER - Trigger Pin Number
                      GPIO_ECHO - Echo Pin Number
-                     sid: Sensor Identification Number
     Return: True or False
     Purpose: To calculate distance of object from ultrasonic sensor in
              centimeter
@@ -55,7 +54,7 @@ def trafficCheck(Trigger, Echo, sensorState, sid):
     
     # taking data from a sensor for 20 times
     for i in range(20):
-            dist = distance(Trigger, Echo, sid) # calling distance function
+            dist = distance(Trigger, Echo) # calling distance function
             value = 1 if dist <= 10 and dist >= 2 else 0 # if object is in between 2 cm and 10 cm, value is 1 else 0
             state.append(value) # append value to state
             time.sleep(1) # sleep for one second
